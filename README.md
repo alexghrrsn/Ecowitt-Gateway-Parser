@@ -18,7 +18,7 @@ A lightweight and flexible Arduino library to connect to Ecowitt weather gateway
 
 This example sketch demonstrates how to connect to your gateway and print the live sensor data to the Serial Monitor.
 
-### `examples/Basic_Ecowitt_Parser/Basic_Ecowitt_Parser.ino`
+### `examples/Basic_Ecowitt_Parser.ino`
 
 ```cpp
 #include <WiFi.h>
