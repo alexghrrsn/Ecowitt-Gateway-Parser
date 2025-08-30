@@ -1,9 +1,6 @@
 /**
  * @file Read_Ecowitt_GW1000.cpp
  * @brief This file contains the implementation of the EcowittGW1000 class.
- *
- * @section license License
- * This library is released under the MIT License. For details, see the accompanying LICENSE file.
  */
 
 #include "Read_Ecowitt_GW1000.h"

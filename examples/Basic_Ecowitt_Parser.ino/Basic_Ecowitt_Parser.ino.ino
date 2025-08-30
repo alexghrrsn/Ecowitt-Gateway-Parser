@@ -1,13 +1,3 @@
-/**
- * @file Basic_Ecowitt_Parser.ino
- * @brief An example sketch to demonstrate the use of the Ecowitt-Gateway-TCP-Parser library.
- *
- * This sketch connects to an Ecowitt gateway (like a GW1000 or GW1100) over TCP and
- * retrieves live sensor data, printing the decoded values to the Serial Monitor.
- *
- * @see https://github.com/alexghrrsn/Ecowitt-Gateway-TCP-Parser
- */
-
 #include <WiFi.h>
 #include <WiFiClient.h>
 #include "Read_Ecowitt_GW1000.h"
@@ -35,7 +25,7 @@ void setup() {
         Serial.println("Connecting to WiFi...");
     }
     Serial.println("Connected to WiFi!");
-    Serial.print("IP address: ");
+    Serial.print("ESP32 IP address: ");
     Serial.println(WiFi.localIP());
 
     delay(2000);

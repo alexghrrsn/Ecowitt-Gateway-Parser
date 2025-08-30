@@ -2,19 +2,8 @@
  * @file Read_Ecowitt_GW1000.h
  * @brief This file contains the declaration of the EcowittGW1000 class and related data structures.
  *
- * @mainpage Ecowitt-Gateway-TCP-Parser
- *
- * This is a lightweight, flexible Arduino library for connecting to Ecowitt weather gateways
- * (like the GW1000 and GW1100) over TCP and decoding live sensor data.
- *
- * @section license License
- * This library is released under the MIT License. For details, see the accompanying LICENSE file.
- *
- * @section author Author
- * Alex Harrison
- *
- * @section url Repository
- * https://github.com/alexghrrsn/Ecowitt-Gateway-TCP-Parser
+ * It provides a class to handle TCP communication with an Ecowitt GW1000/GW1100 gateway,
+ * including sending commands and decoding sensor data packets.
  */
 
 #ifndef READ_ECOWITT_GW1000_H
