@@ -1,0 +1,34 @@
+# Ignore file with personal credentials
+credentials.h
+
+# Arduino IDE generated files
+*.bin
+*.elf
+*.hex
+*.lst
+*.map
+*.o
+*.obj
+*.s
+*.su
+
+# IDE-specific folders and files
+.vscode/
+.settings/
+.project
+.cproject
+.build/
+*.bak
+*.pref
+*.tmp
+/build/
+
+# PlatformIO folders
+.pio/
+.pioenvs/
+.cache/
+
+# User-specific files
+_Revisions.txt
+__MACOSX/
+.DS_Store
