@@ -1,11 +1,11 @@
 /**
- * @file Ecowitt-Gateway-Parser.cpp
- * @brief This file contains the implementation of the Ecowitt-Gateway-Parser class.
+ * @file EcowittGatewayParser.cpp
+ * @brief This file contains the implementation of the EcowittGatewayParser class.
  */
 
-#include "Ecowitt-Gateway-Parser.h"
+#include "EcowittGatewayParser.h"
 
-Ecowitt-Gateway-Parser::Ecowitt-Gateway-Parser(WiFiClient& client) : _client(client) {
+EcowittGatewayParser::EcowittGatewayParser(WiFiClient& client) : _client(client) {
     // Constructor initializes the client reference
 }
 
@@ -151,7 +151,7 @@ const size_t numSensorItems = sizeof(sensorItems) / sizeof(sensorItems[0]);
  * @brief Sends a command to the Ecowitt gateway.
  * @param cmd The command code to be sent.
  */
-void Ecowitt-Gateway-Parser::sendCommand(uint8_t cmd) {
+void EcowittGatewayParser::sendCommand(uint8_t cmd) {
     uint8_t packet[5];
     packet[0] = (PACKET_HEADER >> 8) & 0xFF;
     packet[1] = PACKET_HEADER & 0xFF;
@@ -169,7 +169,7 @@ void Ecowitt-Gateway-Parser::sendCommand(uint8_t cmd) {
  * @param size The number of bytes to convert (max 4).
  * @return The resulting signed 32-bit integer.
  */
-int32_t Ecowitt-Gateway-Parser::convertBytesToInteger(uint8_t* buffer, uint8_t size) {
+int32_t EcowittGatewayParser::convertBytesToInteger(uint8_t* buffer, uint8_t size) {
     int32_t value = 0;
     for (int i = 0; i < size; ++i) {
         value = (value << 8) | buffer[i];
@@ -183,7 +183,7 @@ int32_t Ecowitt-Gateway-Parser::convertBytesToInteger(uint8_t* buffer, uint8_t s
  * @param bytesRead The number of bytes in the buffer.
  * @return true if the packet was successfully decoded, false otherwise.
  */
-bool Ecowitt-Gateway-Parser::readAndDecode(uint8_t* responseBuffer, int bytesRead) {
+bool EcowittGatewayParser::readAndDecode(uint8_t* responseBuffer, int bytesRead) {
     _readings.clear();
 
     if (bytesRead < 5) {
@@ -326,6 +326,6 @@ bool Ecowitt-Gateway-Parser::readAndDecode(uint8_t* responseBuffer, int bytesRea
  * @brief Gets the last set of decoded sensor readings.
  * @return A reference to a std::vector containing the decoded readings.
  */
-std::vector<EcowittSensorReading>& Ecowitt-Gateway-Parser::getReadings() {
+std::vector<EcowittSensorReading>& EcowittGatewayParser::getReadings() {
     return _readings;
 }

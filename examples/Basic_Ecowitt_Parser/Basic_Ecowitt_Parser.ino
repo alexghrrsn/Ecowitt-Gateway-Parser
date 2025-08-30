@@ -1,6 +1,6 @@
 r#include <WiFi.h>
 #include <WiFiClient.h>
-#include "ECOWITT-GATEWAY-PARSER.h"
+#include <EcowittGatewayParser.h>
 #include <vector>
 
 // Define your WiFi network credentials here.
@@ -13,7 +13,7 @@ const char* password = "YOUR_WIFI_PASSWORD";
 const char* ecowittIP = "YOUR_GATEWAY_IP";
 
 WiFiClient client;
-Ecowitt-Gateway-Parser Ecowitt_GW(client);
+EcowittGatewayParser Ecowitt_GW(client);
 
 void setup() {
     Serial.begin(115200);
