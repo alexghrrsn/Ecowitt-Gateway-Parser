@@ -1,0 +1,120 @@
+﻿Hex Code,Sensor Name,Unit,Bytes,Area,Category
+0x01,Indoor Temperature,°C,2,Inside,Temperature
+0x02,Outdoor Temperature,°C,2,Outside,Temperature
+0x03,Dew point,°C,2,Outside,Misc
+0x04,Wind chill,°C,2,Outside,Temperature
+0x05,Heat index,°C,2,Outside,Misc
+0x06,Indoor Humidity,%,1,Inside,Humidity
+0x07,Outdoor Humidity,%,1,Outside,Humidity
+0x08,Absolutely Barometric,hPa,2,Outside,Pressure
+0x09,Relative Barometric,hPa,2,Outside,Pressure
+0x0A,Wind Direction,°,2,Outside,Wind
+0x0B,Wind Speed,m/s,2,Outside,Wind
+0x0C,Gust Speed,m/s,2,Outside,Wind
+0x0D,Rain Event,mm,2,Outside,Rain
+0x0E,Rain Rate,mm/h,2,Outside,Rain
+0x0F,Rain Gain,mm,2,Outside,Rain
+0x10,Rain Day,mm,2,Outside,Rain
+0x11,Rain Week,mm,2,Outside,Rain
+0x12,Rain Month,mm,4,Outside,Rain
+0x13,Rain Year,mm,4,Outside,Rain
+0x14,Rain Totals,mm,4,Outside,Rain
+0x15,Light,lux,4,Outside,Solar
+0x16,UV,uW/m²,2,Outside,Solar
+0x17,UVI,index,1,Outside,Solar
+0x18,Date and time,N/A,6,Misc,Device
+0x19,Day max wind,m/s,2,Outside,Wind
+0x1A,Temperature 1,°C,2,Misc,Temperature
+0x1B,Temperature 2,°C,2,Misc,Temperature
+0x1C,Temperature 3,°C,2,Misc,Temperature
+0x1D,Temperature 4,°C,2,Misc,Temperature
+0x1E,Temperature 5,°C,2,Misc,Temperature
+0x1F,Temperature 6,°C,2,Misc,Temperature
+0x20,Temperature 7,°C,2,Misc,Temperature
+0x21,Temperature 8,°C,2,Misc,Temperature
+0x22,Humidity 1,%,1,Misc,Humidity
+0x23,Humidity 2,%,1,Misc,Humidity
+0x24,Humidity 3,%,1,Misc,Humidity
+0x25,Humidity 4,%,1,Misc,Humidity
+0x26,Humidity 5,%,1,Misc,Humidity
+0x27,Humidity 6,%,1,Misc,Humidity
+0x28,Humidity 7,%,1,Misc,Humidity
+0x29,Humidity 8,%,1,Misc,Humidity
+0x2A,PM2.5 Air Quality Sensor,µg/m³,2,Outside,Air
+0x2B,Soil Temperature 1,°C,2,Outside,Soil
+0x2C,Soil Moisture 1,%,1,Outside,Soil
+0x2D,Soil Temperature 2,°C,2,Outside,Soil
+0x2E,Soil Moisture 2,%,1,Outside,Soil
+0x2F,Soil Temperature 3,°C,2,Outside,Soil
+0x30,Soil Moisture 3,%,1,Outside,Soil
+0x31,Soil Temperature 4,°C,2,Outside,Soil
+0x32,Soil Moisture 4,%,1,Outside,Soil
+0x33,Soil Temperature 5,°C,2,Outside,Soil
+0x34,Soil Moisture 5,%,1,Outside,Soil
+0x35,Soil Temperature 6,°C,2,Outside,Soil
+0x36,Soil Moisture 6,%,1,Outside,Soil
+0x37,Soil Temperature 7,°C,2,Outside,Soil
+0x38,Soil Moisture 7,%,1,Outside,Soil
+0x39,Soil Temperature 8,°C,2,Outside,Soil
+0x3A,Soil Moisture 8,%,1,Outside,Soil
+0x3B,Soil Temperature 9,°C,2,Outside,Soil
+0x3C,Soil Moisture 9,%,1,Outside,Soil
+0x3D,Soil Temperature 10,°C,2,Outside,Soil
+0x3E,Soil Moisture 10,%,1,Outside,Soil
+0x3F,Soil Temperature 11,°C,2,Outside,Soil
+0x40,Soil Moisture 11,%,1,Outside,Soil
+0x41,Soil Temperature 12,°C,2,Outside,Soil
+0x42,Soil Moisture 12,%,1,Outside,Soil
+0x43,Soil Temperature 13,°C,2,Outside,Soil
+0x44,Soil Moisture 13,%,1,Outside,Soil
+0x45,Soil Temperature 14,°C,2,Outside,Soil
+0x46,Soil Moisture 14,%,1,Outside,Soil
+0x47,Soil Temperature 15,°C,2,Outside,Soil
+0x48,Soil Moisture 15,%,1,Outside,Soil
+0x49,Soil Temperature 16,°C,2,Outside,Soil
+0x4A,Soil Moisture 16,%,1,Outside,Soil
+0x4C,All sensor lowbatt,N/A,16,Misc,Device
+0x4D,PM2.5 24H Average 1,N/A,2,Outside,Air
+0x4E,PM2.5 24H Average 2,N/A,2,Outside,Air
+0x4F,PM2.5 24H Average 3,N/A,2,Outside,Air
+0x50,PM2.5 24H Average 4,N/A,2,Outside,Air
+0x51,PM2.5 Air Quality Sensor 2,µg/m³,2,Outside,Air
+0x52,PM2.5 Air Quality Sensor 3,µg/m³,2,Outside,Air
+0x53,PM2.5 Air Quality Sensor 4,µg/m³,2,Outside,Air
+0x58,Leak Sensor 1,N/A,1,Misc,Leak
+0x59,Leak Sensor 2,N/A,1,Misc,Leak
+0x5A,Leak Sensor 3,N/A,1,Misc,Leak
+0x5B,Leak Sensor 4,N/A,1,Misc,Leak
+0x60,Lightning distance,KM,1,Outside,Lightning
+0x61,Lightning happened time,UTC,4,Outside,Lightning
+0x62,Lightning counter,N/A,4,Outside,Lightning
+0x63,Temperature 1,°C,3,Misc,Temperature
+0x64,Temperature 2,°C,3,Misc,Temperature
+0x65,Temperature 3,°C,3,Misc,Temperature
+0x66,Temperature 4,°C,3,Misc,Temperature
+0x67,Temperature 5,°C,3,Misc,Temperature
+0x68,Temperature 6,°C,3,Misc,Temperature
+0x69,Temperature 7,°C,3,Misc,Temperature
+0x6A,Temperature 8,°C,3,Misc,Temperature
+0x6C,Heap Free,N/A,4,Misc,Temperature
+0x70,CO2 Sensor,N/A,16,Outside,Air
+0x71,PM2.5 AQI,N/A,1,Outside,Air
+0x72,Leaf Wetness 1,N/A,1,Outside,Leaf
+0x73,Leaf Wetness 2,N/A,1,Outside,Leaf
+0x74,Leaf Wetness 3,N/A,1,Outside,Leaf
+0x75,Leaf Wetness 4,N/A,1,Outside,Leaf
+0x76,Leaf Wetness 5,N/A,1,Outside,Leaf
+0x77,Leaf Wetness 6,N/A,1,Outside,Leaf
+0x78,Leaf Wetness 7,N/A,1,Outside,Leaf
+0x79,Leaf Wetness 8,N/A,1,Outside,Leaf
+0x7A,Rain Priority,N/A,1,Outside,Leaf
+0x7B,Radiation compensation,N/A,1,Outside,Leaf
+0x80,Piezo Rain Rate,N/A,2,Outside,Rain
+0x81,Piezo Event Rain,N/A,2,Outside,Rain
+0x82,Piezo Hourly Rain,N/A,2,Outside,Rain
+0x83,Piezo Daily Rain,N/A,4,Outside,Rain
+0x84,Piezo Weekly Rain,N/A,4,Outside,Rain
+0x85,Piezo Monthly Rain,N/A,4,Outside,Rain
+0x86,Piezo yearly Rain,N/A,4,Outside,Rain
+0x87,Piezo Gain,N/A,2,Outside,Rain
+0x88,RST Rain Time,N/A,3,Misc,Device
