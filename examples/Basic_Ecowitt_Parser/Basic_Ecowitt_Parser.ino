@@ -1,6 +1,6 @@
-#include <WiFi.h>
+r#include <WiFi.h>
 #include <WiFiClient.h>
-#include "Read_Ecowitt_GW1000.h"
+#include "ECOWITT-GATEWAY-PARSER.h"
 #include <vector>
 
 // Define your WiFi network credentials here.
@@ -13,7 +13,7 @@ const char* password = "YOUR_WIFI_PASSWORD";
 const char* ecowittIP = "YOUR_GATEWAY_IP";
 
 WiFiClient client;
-EcowittGW1000 gw1100(client);
+Ecowitt-Gateway-Parser Ecowitt_GW(client);
 
 void setup() {
     Serial.begin(115200);
@@ -25,7 +25,7 @@ void setup() {
         Serial.println("Connecting to WiFi...");
     }
     Serial.println("Connected to WiFi!");
-    Serial.print("ESP32 IP address: ");
+    Serial.print("IP address: ");
     Serial.println(WiFi.localIP());
 
     delay(2000);
@@ -33,17 +33,17 @@ void setup() {
 
 void loop() {
     if (!client.connected()) {
-        Serial.println("Connection to Ecowitt GW1100 is not active. Attempting to connect...");
+        Serial.println("Connection to Ecowitt gateway is not active. Attempting to connect...");
         if (!client.connect(ecowittIP, ecowittPort)) {
-            Serial.println("Connection to Ecowitt GW1100 failed! Retrying in 5 seconds.");
+            Serial.println("Connection to Ecowitt gateway failed! Retrying in 5 seconds.");
             delay(5000);
             return;
         }
-        Serial.println("Successfully connected to Ecowitt GW1100.");
+        Serial.println("Successfully connected to Ecowitt gateway.");
     }
     
     Serial.println("Sending CMD_GW1000_LIVEDATA command...");
-    gw1100.sendCommand(CMD_GW1000_LIVEDATA);
+    Ecowitt_GW.sendCommand(CMD_GW1000_LIVEDATA);
     
     unsigned long timeout = millis() + 5000;
     while (!client.available() && millis() < timeout) {
@@ -54,9 +54,9 @@ void loop() {
         uint8_t responseBuffer[256];
         int bytesRead = client.read(responseBuffer, sizeof(responseBuffer));
         
-        if (gw1100.readAndDecode(responseBuffer, bytesRead)) {
+        if (Ecowitt_GW.readAndDecode(responseBuffer, bytesRead)) {
             Serial.println("--- Decoded Data ---");
-            const std::vector<EcowittSensorReading>& readings = gw1100.getReadings();
+            const std::vector<EcowittSensorReading>& readings = Ecowitt_GW.getReadings();
             
             for (const auto& reading : readings) {
                 Serial.print(reading.description);
@@ -70,7 +70,7 @@ void loop() {
             Serial.println("Failed to decode data.");
         }
     } else {
-        Serial.println("Timeout: No data received from Ecowitt GW1100.");
+        Serial.println("Timeout: No data received from Ecowitt gateway.");
     }
 
     client.stop();

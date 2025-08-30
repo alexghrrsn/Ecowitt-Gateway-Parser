@@ -1,13 +1,13 @@
 /**
- * @file Read_Ecowitt_GW1000.h
- * @brief This file contains the declaration of the EcowittGW1000 class and related data structures.
+ * @file ECOWITT-GATEWAY-PARSER.h
+ * @brief This file contains the declaration of the Ecowitt-Gateway-Parser class and related data structures.
  *
  * It provides a class to handle TCP communication with an Ecowitt GW1000/GW1100 gateway,
  * including sending commands and decoding sensor data packets.
  */
 
-#ifndef READ_ECOWITT_GW1000_H
-#define READ_ECOWITT_GW1000_H
+#ifndef ECOWITT-GATEWAY-PARSER_H
+#define ECOWITT-GATEWAY-PARSER_H
 
 #include <Arduino.h>
 #include <WiFiClient.h>
@@ -40,19 +40,19 @@ struct EcowittSensorReading {
 };
 
 /**
- * @class EcowittGW1000
+ * @class Ecowitt-Gateway-Parser
  * @brief A class to manage the TCP connection and decode data from an Ecowitt GW1000/GW1100 gateway.
  *
  * This class handles the low-level communication protocol, including sending commands
  * and parsing the binary data stream into a structured format.
  */
-class EcowittGW1000 {
+class Ecowitt-Gateway-Parser {
 public:
     /**
-     * @brief Construct a new EcowittGW1000 object.
+     * @brief Construct a new Ecowitt-Gateway-Parser object.
      * @param client An active WiFiClient object to use for communication.
      */
-    EcowittGW1000(WiFiClient& client);
+    Ecowitt-Gateway-Parser(WiFiClient& client);
 
     /**
      * @brief Sends a command to the Ecowitt gateway.
